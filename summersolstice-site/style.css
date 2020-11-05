@@ -1,0 +1,20 @@
+body {background-color: black;
+}
+
+#text-top{
+    color: white;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 15px;
+}
+
+#text-bottom{
+    color: white;
+    text-align: center;
+    padding-top: 70px;
+    font-size: 15px;
+}
+
+#signal{
+    padding-top: 70px;
+}

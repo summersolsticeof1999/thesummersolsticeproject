@@ -1,0 +1,75 @@
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+
+  <!--I have not written this-->
+
+  <!--the summer solstice projects starts in your gut and slowly progresses inwards in accord with the structure of the universe-->
+
+  <!-- This line removes any default padding and style.
+  You might only need one of these values set. -->
+  <style> body { padding: 0; margin: 0; } </style>
+
+  <!--displays a perlin noise signal-->
+  <script>
+
+    var start = 0;
+    var inc_start = 0.005;
+    var inc_xoff = 0.02;
+
+		function setup(){
+			var canvas = createCanvas(windowWidth, 360);
+			  frameRate(100);
+				canvas.parent('signal');
+
+		}
+		
+		function draw(){
+			background(0);
+			noFill();
+		  
+			beginShape();
+		  var xoff = start;
+			for (var x = 0; x < width; x++){
+			stroke(255);
+			var y = noise(xoff) * height;
+			vertex(x, y);
+			xoff += inc_xoff;
+      }
+			endShape();
+		  start += inc_start;
+    }
+    
+  </script>
+
+</head>
+
+<body>
+
+  <div id="text-top">
+
+    <p>The eyes are not here</p>
+    <p>There are no eyes here</p>
+
+  </div>
+
+  <div id="signal"></div>
+
+  <div id="text-bottom">
+
+
+    <p>In this valley of dying stars
+    <p>In this hollow valley</p>
+    <p>This broken jaw of our lost kingdoms</p>
+
+  </div>
+
+</body>
+</html>
